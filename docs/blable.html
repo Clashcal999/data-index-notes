@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blades of time-like (Study Project) and Blender Modeling + animation study</title>
+</head>
+<body>
+  <h1>Blades of time-like (Study Project)</h1>
+
+<ul>
+   <li><pre> 🎯 Project Vision & Intent Summary
+
+This project is a learning-first game development journey, with the goal of creating a third-person action game inspired by the style and technical characteristics of Blades of Time (2012). It is not intended to push the limits of current-gen graphics or hardware, but rather to intelligently match a level of visual fidelity and performance that is proven to run well on today’s modest, mid-to-low-end hardware.
+
+----------------------------------------------------------------------------------
+
+✅ Summary of Your Project Vision
+🎯 Target Goals
+
+🧱 Game Type
+
+Third-person action/hack-and-slash
+
+Combo-based melee combat (possibly with some ranged)
+
+Light platforming and puzzles
+
+Possibly semi-open areas, linear progression
+
+🎨 Visual Level
+
+Comparable to Blades of Time (2012)
+
+Good lighting, decent textures, stylized/realistic mix
+
+No advanced modern features like ray tracing or dynamic GI
+
+Needs to run well on mid-range hardware from the last 5–10 years
+
+⚙️ Performance Targets
+
+60 FPS on modest GPUs (e.g. GTX 1050 Ti / RX 570)
+
+Low RAM usage (<6–8 GB total)
+
+Runs SSD
+
+----------------------------------------------------------------------------------
+
+Recreate the visual fidelity and performance of Blades of Time (2012) — meaning sharp, stylized realism that runs smoothly on modern mid-to-low end systems (think: integrated graphics or GTX 1650/1050 Ti).
+
+You’re okay with requiring SSDs, which is great — that opens up faster loading times and streaming.
+
+You're not chasing the latest AAA engine tech (no Unreal 5-style overkill).
+
+Long-term goal may be a bigger game, possibly open world if the systems scale well.
+
+💡 Your Background
+
+Thousands of hours playing across genres → strong gameplay design instincts.
+
+Familiar with mods and game logic — excellent foundation.
+
+Some exposure to RPGMaker → you’ve seen game logic and variable systems.
+
+No formal programming experience yet — so the toolset needs to be friendly and teachable.
+
+🛠️ Engine Choice: Unity 2022 LTS (URP)
+
+This is the right choice for your goals:
+
+✅ Optimized for mid-range hardware
+✅ Solid lighting and shader tools without going overboard
+✅ Mature ecosystem and great asset store
+✅ Massive learning resources (both text and video)
+✅ Easy to get started without heavy code
+
+The URP (Universal Render Pipeline) will give you that balance of:
+
+Good performance
+
+Scalability
+
+Visual fidelity equal or superior to Blades of Time, without modern bloat
+
+📚 Learning Plan: “Recreate a Blades of Time-Level Game, Step-by-Step”
+
+We’ll start small and scale up. You’ll be building as you learn, not memorizing theory.
+
+----------------------------------------------------------------------------------
+
+The core motivations behind the project are:
+
+✅ To learn game development step-by-step, especially using Unity (2022 LTS + URP), without prior formal coding experience.
+
+✅ To build a visually solid and mechanically satisfying third-person action game — with responsive melee combat, a controllable camera, and stylized environments.
+
+✅ To understand how older games like Blades of Time were able to look good and perform well, and replicate that balance with modern tools, not modern hardware demands.
+
+✅ To stay lean in scope and technology, favoring efficiency, modularity, and intelligent design choices over feature bloat or visual overkill.
+
+✅ To use this project as a long-term skill-building path, starting from zero and potentially evolving into something larger, like an open-world experience — if and only if the prototype phase proves successful and scalable.
+
+In short, the ultimate purpose is to:
+
+Create a third-person action prototype with the look and performance of a 2012-era AA game, using modern tools, while learning game development from the ground up at a manageable pace.
+
+The project is designed to be sustainable, focused, and modular, with each phase building new skills and systems, and future work always depending on a polished and performant core.
+
+----------------------------------------------------------------------------------
+
+✅ Game Development Learning Project: Table of Contents
+🎮 Project: "Blades of Time"-Style Third-Person Action Game
+⚙️ Engine: Unity 2022 LTS (URP)
+📁 PART 0 — Setup & Planning
+
+Get the right tools installed and environment ready
+
+0.1 Install Unity Hub + Unity 2022 LTS (URP Template)
+0.2 Install Visual Studio (with Unity integration)
+0.3 Set up new Unity Project (URP)
+0.4 Install starter packages:
+  — Cinemachine (camera),
+  — Input System,
+  — ProBuilder (optional for level prototyping)
+0.5 Create basic project folders (Scripts, Prefabs, Animations, Materials, etc.)
+
+🎮 PART 1 — Core Player Controller
+
+Get a basic third-person player running and swinging a sword
+
+1.1 Import placeholder character (e.g. Mixamo)
+1.2 Create third-person movement (WASD + mouse camera)
+1.3 Add jumping, falling, and gravity
+1.4 Implement animation states (idle, run, jump, sword swing)
+1.5 Build a basic melee attack system (press button = attack animation + damage)
+
+👁️ PART 2 — Camera and Visual Polish
+
+Start improving the feel of movement and the look of the game
+
+2.1 Implement Cinemachine third-person camera
+2.2 Add camera smoothing, orbit, and follow behavior
+2.3 Create a test environment (use modular assets or ProBuilder)
+2.4 Add baked lighting and basic post-processing (URP settings)
+2.5 Add basic VFX: sword trails, hit effects (particles), screen shake
+
+🧠 PART 3 — Enemy AI and Combat System
+
+Create a simple enemy and make combat interactive
+
+3.1 Import enemy model + animations
+3.2 Set up NavMesh (pathfinding)
+3.3 Make enemy follow and attack player
+3.4 Add enemy hit reaction + health system
+3.5 Add player health + basic UI (HP bar)
+3.6 Add basic death logic (enemy & player)
+
+🗺️ PART 4 — Level Design & World Systems
+
+Create larger environments and zone transitions
+
+4.1 Design modular level pieces (stairs, ruins, corridors, arena)
+4.2 Set up loading zones or transitions (scene loading, portals, or additive scenes)
+4.3 Optimize with occlusion culling, LODs, and light baking
+4.4 Add fog, skyboxes, environmental effects (wind, fire, lava, etc.)
+
+🧪 PART 5 — Polish & Performance Tuning
+
+Make the game feel smooth and ready for larger scope
+
+5.1 Add damage numbers and sound FX
+5.2 Add input buffer, combo attacks, and hit stun
+5.3 Improve enemy AI behavior (dodge, ranged attacks, patrol)
+5.4 Profile GPU/CPU usage (Unity Profiler)
+5.5 Improve build size and loading time
+5.6 Optional: Add gamepad/controller support
+
+🌍 PART 6 — Optional Expansions
+
+Only if the core prototype runs well and you want to go further
+
+6.1 Add inventory or weapon switching system
+6.2 Dialogue or mission triggers
+6.3 Open-world style world streaming (multiple connected zones)
+6.4 Quest or progression system
+6.5 Saving/loading system
+6.6 Main menu and options screen
+
+🧰 PART 7 — Tools & Reference
+
+Asset links, libraries, templates for reuse
+
+List of trusted asset sites (Mixamo, Kenney, Synty, etc.)
+
+Shader Graph tips for URP
+
+Performance checklist
+
+Script templates (health, combat, AI)
+
+Export and build checklist
+
+📝 How to Use This Structure
+
+Keep this saved locally in a text file or document
+
+When you return to the project, just say:
+“We were at [PART #.#], working on [X]. Let’s resume.”
+
+I’ll immediately continue from that point, and re-load any needed code or context.
+
+----------------------------------------------
+
+✅ PROJECT PROGRESS SUMMARY
+As of Part 1.3 — Animator Controller Complete
+🔹 Project Setup
+
+Unity Hub installed
+
+Unity 2022.3.6f1 LTS (URP) installed and launched via Unity Hub
+
+Microsoft Visual Studio 2022 module installed for scripting
+
+New Unity project created using Universal Render Pipeline (URP) - 3D template
+
+Project folders structured under Assets/_Project/:
+
+Animations
+
+Models
+
+Materials
+
+Scenes
+
+Scripts
+
+Prefabs, etc.
+
+🔹 Scene Setup
+
+Main scene created, saved as MainScene.unity inside the Scenes folder
+
+Sample scene deleted to avoid confusion
+
+Default lighting, camera, and global volume retained for now
+
+🔹 Character Setup
+
+Y-Bot model downloaded from [Mixamo.com]
+
+Placed in the Models folder
+
+Rig configured to Humanoid in the FBX import settings
+
+Dragged into the scene and positioned (currently in T-pose)
+
+🔹 Animation Setup
+
+4 animations downloaded from Mixamo:
+
+Idle
+
+Running
+
+Jump
+
+Attack (e.g. Sword Slash)
+
+Download settings:
+
+Format: FBX for Unity
+
+Skin: Without Skin
+
+FPS: 30
+
+Keyframe Reduction: None
+
+All animations imported into Animations Mixamo folder
+
+Rig set to Humanoid for all
+
+Loop settings applied correctly:
+
+Idle/Run: Loop ✅ ON
+
+Jump/Attack: Loop ❌ OFF
+
+Animation clips were initially mislabeled (mixamo_com) but then successfully renamed in the Animation Import tab to reflect their correct purpose (Idle, Run, etc.)
+
+🔹 Animator Controller Setup
+
+Animator Controller created: PlayerAnimator
+
+Assigned to the Y-Bot’s Animator component
+
+Animation states set up in the Animator graph:
+
+Idle (default)
+
+Run
+
+Jump
+
+Attack
+
+Animator Parameters created:
+
+Speed (Float)
+
+IsJumping (Bool)
+
+Attack (Trigger)
+
+Transitions created between states based on conditions:
+
+Idle <--> Run: Based on Speed
+
+Idle → Jump: IsJumping == true
+
+Any State → Attack: Trigger
+
+Exit Times disabled where necessary for responsive transitions
+
+🟡 Next Step (Not Started Yet)
+
+Part 1.4 — Basic Third-Person Character Movement
+
+This will introduce player input using Unity’s Input System or classic Input
+
+The Speed, IsJumping, and Attack parameters will be driven by player input
+
+Character will move in the scene and play the correct animations based on state </pre></li>
+
+    <li><pre> ✅ DOCUMENT: Stylized Game Character Modeling & Animation Learning Track
+🎯 Project Purpose & Vision
+
+This is a practical, learning-first track focused on building high-quality stylized characters for games and cinematic animations. The long-term goal is to match the visual fidelity and animation quality of Blades of Time (2012) using modern, lightweight tools that run smoothly on mid-to-low-end systems.
+
+This track supports the main third-person action game project in Unity, but can also be used for:
+
+Creating animations for trailers, YouTube content, or funding pitches
+
+Learning industry-relevant 3D modeling and animation skills from the ground up
+
+Building a reusable character pipeline for future games
+
+🧠 Your Background
+
+You are:
+
+Already sculpting in ZBrush at a basic level (you know how to model forms, but haven’t yet retopologized or exported game-ready assets)
+
+Familiar with the principles of animation and have a good eye for movement quality
+
+Totally new to Blender, but willing and eager to learn
+
+Not looking for high-end AAA workflows — targeting efficient, optimized, stylized models and smooth animations
+
+🛠️ Tools Used in This Track
+Task	Tool
+3D Modeling / Rigging / Animation	Blender
+Optional Sculpting	ZBrush or ZBrushCoreMini
+Mocap Rigging / Auto-Animation	Mixamo
+Game Engine	Unity 2022 LTS (URP)
+Texturing (optional)	Blender’s texture painting or Substance Painter
+📚 Table of Contents — Character Modeling & Animation Track
+Phase	Topic	Goal
+1.0	Blender Setup & Navigation	Install Blender, learn UI and 3D space
+1.1	Simple Character Blockout	Create a basic humanoid using primitive shapes
+1.2	Stylized Character Modeling	Full-body stylized mesh (mid-poly, clean topology)
+1.3	Clothing & Accessories	Modular clothing or armor, performance-aware modeling
+1.4	Retopology (if needed)	Optimize high-poly sculpts for animation/game use
+1.5	UV Unwrapping	Prep model for textures and shaders
+1.6	Rigging & Skinning	Add armature and weight paint for animation
+1.7	Export to Unity / Mixamo	Clean FBX export for engine or mocap pipeline
+2.0	Mixamo Integration	Test rig with Mixamo animations and import into Unity
+3.0	Manual Animation in Blender	Animate walk, run, attack, idle cycles by hand
+4.0	Animation Cleanup & Polish	Add curves, smoothing, and blend shapes
+5.0	Unity Animator Setup	Blend trees, state machines, and animation logic
+6.0	Bonus: Facial Rigging or Cinematic Shots	Only if desired; useful for trailers or NPCs
+📝 How to Use This Structure
+
+Keep this document saved locally in a text file or note app.
+
+When returning to this topic, just say:
+
+“We were in Phase [#.#], working on [X] from the Character Animation track.”
+
+I’ll instantly reload everything: tools, workflow, goals, and where we left off.
+
+---------------------------------------------------------------------------------------------
+
+🔰 Phase 1.0 — Blender Setup & Navigation (Your First Steps)
+🎯 Objective:
+
+Get you comfortable using Blender’s interface, basic tools, and 3D navigation — so you can confidently begin modeling your first character.
+
+🛠️ Step-by-Step Instructions:
+1. Install Blender
+
+If you haven’t already:
+
+🔗 Download Blender
+
+Get the latest stable version
+
+Run the installer and open Blender once it's ready
+
+2. Learn the Interface & Navigation
+
+Open Blender and do the following:
+
+🎥 Optional Video Tutorial (Highly Recommended):
+
+Title: “Blender Beginner Tutorial Part 1 – Interface & Navigation”
+
+YouTube channel: Blender Guru or CG Cookie Beginner Series
+(If you'd like me to find one for you, just ask.)
+
+https://www.youtube.com/watch?v=23iiX-XHDvY
+
+🧭 Key Concepts to Learn:
+Tool	Description
+Middle Mouse Button	Orbit around the scene
+Shift + MMB	Pan
+Scroll Wheel	Zoom
+A / G / R / S	Select All, Grab (move), Rotate, Scale
+Tab	Toggle between Object Mode and Edit Mode
+X	Delete selected item
+Right Click	Context menu
+F3	Search for any tool quickly
+N / T	Open right/left side panels (numeric and tool properties)
+3. First Hands-On Practice
+✏️ Task 1: Basic Navigation & Editing
+
+Open the default Blender file (cube in center)
+
+Orbit, pan, zoom around the cube
+
+Select it, rotate it, scale it, move it
+
+Enter Edit Mode (Tab), select a face, extrude it (press E), and move it
+
+Return to Object Mode
+
+✏️ Task 2: Create a Humanoid Blockout
+
+Create a rough stick-figure or mannequin character using simple shapes:
+
+Add mesh primitives:
+
+Shift + A → Mesh → Cube / Cylinder / UV Sphere
+
+Use these to build:
+
+A sphere for the head
+
+A cylinder for each arm/leg
+
+A cube for the body
+
+This will help you get comfortable using:
+
+Object placement
+
+Scaling and positioning
+
+Navigating around a model
+
+✅ Goal to Reach Before Moving On:
+
+You’ve opened Blender and feel confident moving around in 3D
+
+You can switch between object/edit mode, manipulate shapes, and move the camera
+
+You've created a basic humanoid blockout using primitive shapes </pre></li>
+
+  </ul>
+
+
+  <p><a href="index.html">← Back to Home</a></p>
+</body>
+</html>
